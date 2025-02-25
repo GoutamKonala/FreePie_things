@@ -1,3 +1,8 @@
+"""
+Basic controller with each button on Wiimote+Nunchuck mapped to a VJoy button
+Requires use of VJoy to translate each button to a controller that windows can recognize
+Can use programs like XOutput to translate VJoy inputs (As well as other inputs like keyboards, mice, other controllers, etc) to look like an Xbox 360 controller.
+"""
 def map_pov(n):
   if wiimote[n].buttons.button_down(WiimoteButtons.DPadUp):
     vJoy[n].setDigitalPov(0, VJoyPov.Up)
@@ -46,7 +51,6 @@ def map_nunchuck_buttons(n):
 
 
 def updateWiimote1():
-  # Wiimote 1
   map_buttons(0)
   map_pov(0)
 
@@ -56,8 +60,6 @@ def updateNunchuck1():
   map_nunchuck_buttons(0)
 
 
-# If we're starting up, then hook up our update function.
 if starting:
   wiimote[0].buttons.update += updateWiimote1
-
   wiimote[0].nunchuck.update += updateNunchuck1
