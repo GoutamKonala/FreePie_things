@@ -1,2 +1,3 @@
-# Wii_Mote-things
-Free pie scripts that use my wiimote (And maybe the nunchuck)
+# FreePie-things
+Free pie scripts that I made.
+Most scripts will use my WiiMote with/without a nunchuck
