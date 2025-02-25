@@ -1,3 +1,16 @@
+"""
+Uses Accelerometers to turn Wiimote into Flightstick. Still work in progress.
+Controller with each button on Wiimote+Nunchuck mapped to a VJoy button as well as Nunchuck roll tied to 2 extra buttons.
+Requires use of VJoy to translate each button to a controller that windows can recognize.
+Can use programs like XOutput to translate VJoy inputs (As well as other inputs like keyboards, mice, other controllers, etc) to look like an Xbox 360 controller.
+Rolling Nunchuck left or right by >=15 degrees presses 2 extra buttons. (I used them for yaw in flight sims but they can be used for anything of course)
+
+Replaced left joystick controls with flightstick movement. Nunchuck joystick was moved from left joystick to right joystick.
+Currently flightstick is oriented with sensor side down and buttons facing you.
+
+Still working on this.
+"""
+
 def pryAngle(v, a, b):  # Gives angle on particular plane based on accelerometer output
   mag = math.sqrt(v[a] ** 2 + v[b] ** 2)
 
