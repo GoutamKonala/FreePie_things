@@ -1,3 +1,11 @@
+"""
+Basic controller with each button on Wiimote+Nunchuck mapped to a VJoy button as well as Nunchuck roll tied to 2 extra buttons
+Requires use of VJoy to translate each button to a controller that windows can recognize
+Can use programs like XOutput to translate VJoy inputs (As well as other inputs like keyboards, mice, other controllers, etc) to look like an Xbox 360 controller.
+Rolling Nunchuck left or right by >=15 degrees presses 2 extra buttons. (I used them for yaw in flight sims but they can be used for anything of course)
+
+Sorry for the untidy code. Will clean it up later.
+"""
 def map_pov(n):
   if wiimote[n].buttons.button_down(WiimoteButtons.DPadUp):
     vJoy[n].setDigitalPov(0, VJoyPov.Up)
